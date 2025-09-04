@@ -8,7 +8,7 @@ export default function News() {
         fetch("https://api.rss2json.com/v1/api.json?rss_url=https://ria.ru/export/rss2/index.xml")
             .then((res) => res.json())
             .then((data) => {
-                setPosts(data);
+                setPosts(data.items || []); // ✅ use items array
                 setLoading(false);
             })
             .catch(() => setLoading(false));
@@ -21,10 +21,11 @@ export default function News() {
                 <p>Загрузка...</p>
             ) : (
                 <ul>
-                    {posts.map((post) => (
-                        <li key={post.id} className="card">
+                    {posts.map((post, index) => (
+                        <li key={index} className="card">
                             <h3>{post.title}</h3>
-                            <p>{post.body}</p>
+                            <p dangerouslySetInnerHTML={{ __html: post.description }} />
+                            <a href={post.link} target="_blank" rel="noopener noreferrer">Читать</a>
                         </li>
                     ))}
                 </ul>
