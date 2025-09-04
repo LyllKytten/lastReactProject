@@ -1,0 +1,95 @@
+/* ===== Общие базовые стили ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #222;
+}
+
+/* ===== Навигация ===== */
+nav {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+nav button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav button:hover {
+    background: #d0e2ff;
+}
+
+nav button.active {
+    background: #3b82f6;
+    color: white;
+}
+
+/* ===== Карточки ===== */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* ===== Кнопки ===== */
+.btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+/* ===== Поля ввода ===== */
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* ===== Чат ===== */
+.chat-box {
+    max-width: 500px;
+}
+
+.chat-messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat-messages li {
+    background: #f0f0f0;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
