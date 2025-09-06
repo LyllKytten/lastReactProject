@@ -1,0 +1,22 @@
+.links {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.PageLink {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.PageLink:hover {
+    background: #d0e2ff;
+}
+
+.ActivePageLink {
+    background: #3b82f6;
+    color: white;
+}
